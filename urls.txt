@@ -1,0 +1,3 @@
+https://www.fmrib.ox.ac.uk/datasets/HCP-CCA/column_headers.txt
+https://www.fmrib.ox.ac.uk/datasets/HCP-CCA/rfMRI_motion.txt
+https://www.fmrib.ox.ac.uk/datasets/HCP-CCA/varsQconf.txt
