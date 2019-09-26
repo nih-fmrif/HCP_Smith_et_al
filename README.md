@@ -16,7 +16,7 @@
     ├── NET.py
     ├── VARS.py
     ├── urls.txt
-    ├── requirements.txt
+    └── requirements.txt
   
 4. install the dependencies (_pip install -r requirements.txt_)
 5. run _setup.sh_
@@ -44,7 +44,7 @@
     ├── NET.py
     ├── VARS.py
     ├── urls.txt
-    ├── requirements.txt
+    └── requirements.txt
     
 6. run _hcp_cca_smith.m_ (NOTE: before running, make sure to add the _data/_ folder to your MATLAB path)
 
