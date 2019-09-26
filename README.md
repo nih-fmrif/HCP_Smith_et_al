@@ -61,23 +61,26 @@
   - Ncca (number of FWE-significant CCA components): 0
   - Scatter plot of SM weights vs. connectome weights:
 <p align="Center">
-  <img src="images/VvsU.png">
+  <img src="https://github.com/Ngoyal95/HCP_CCA_Analysis/blob/master/analysis3/images/analysis3_VvsU.png">
 </p>
-<p align="center">
-    <img src="images/VvsU_regression.png">
+<p align="Center">
+    <img src="https://github.com/Ngoyal95/HCP_CCA_Analysis/blob/master/analysis3/images/analysis3_regression.png">
 </p>
 
 This plot is similar to the one from Smith et al., but still not exactly the same.
+<p align="Center">
+    <img src="https://github.com/Ngoyal95/HCP_CCA_Analysis/blob/master/images/smith_SMsvsConnectome.png">
+</p>
 
 ## Variance analysis
 
 The % variance of the connectome weights as explained by CCA mode 1 was also analyzed (in attempt to reproduce result from Smith et al.):
 <p align="Center">
-  <img src="images/percentvariance_explained.png" width=450>
+  <img src="https://github.com/Ngoyal95/HCP_CCA_Analysis/blob/master/variance_analyses/analysis3/images/analysis3_percentvariance_explained.png" width=450>
 </p>
 
 Although the % variance for mode 1 (approx 0.53%) agrees with what was reported in smith et al (see image below from the paper), the results for the other 19 CCA modes do not match up. This is likely because this variance analysis is just our guess as to how it was performed in Smith et al.
 
 <p align="Center">
-  <img src="images/smith_percentvar.png" width=450>
+  <img src="https://github.com/Ngoyal95/HCP_CCA_Analysis/blob/master/images/smith_percentvar.png" width=450>
 </p>
