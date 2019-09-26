@@ -125,7 +125,6 @@ plotregression(grotU(:,1),grotV(:,1))
 modeVar = zeros(20,1);
 for m = 0:19
     beta = zeros(461,1);
-    grotAAd = corr(grotU(:,m+1),NETd(:,1:size(NET,2)))'; % weights after deconfounding
     
     for n = 0:460;
         b = regress(NET(n+1,:).',grotAAd);
@@ -148,13 +147,6 @@ title('var plot for connectome edges')
 modeVar = zeros(20,1)
 for m = 0:19
     beta = zeros(461,1);
-    
-    varsgrot=palm_inormal(vars);
-    for i=1:size(varsgrot,2)
-      grot=(isnan(varsgrot(:,i))==0); grotconf=nets_demean(conf(grot,:)); varsgrot(grot,i)=nets_normalise(varsgrot(grot,i)-grotconf*(pinv(grotconf)*varsgrot(grot,i)));
-    end
-    grotBBd = corr(grotV(:,m+1),varsgrot,'rows','pairwise')'; % weights after deconfounding
-
     
     for n = 0:460;
         b = regress(vars(n+1,:).',grotBBd);
