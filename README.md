@@ -19,7 +19,7 @@
     └── requirements.txt
   
 4. install the dependencies (_pip install -r requirements.txt_)
-5. run _setup.sh_
+5. run _setup.sh_ (NOTE: You only need to run this once!)
 
   ```
   ./setup.sh <path_to_HCP500_Parcellation_Timeseries_Netmats.zip> <path_to_urls.txt> <path_to_HCP500_unrestricted_data> <path_to_HCP500_restricted_data> <path_to_HCP1200_restricted_data>"
