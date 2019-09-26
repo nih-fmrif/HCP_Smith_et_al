@@ -24,11 +24,11 @@
   After running, your directory structure should look like this:
   
     analysis/
-    ├── images
-    ├── mat_files
-    ├── other
+    ├── images/
+    ├── mat_files/
+    ├── other/
     │   ├── HCP500_Parcellation_Timeseries_Netmats/     # Extracted version of HCP500_Parcellation_Timeseries_Netmats.zip
-    ├── data                                            # Contains data necessary for analysis
+    ├── data/                                            # Contains data necessary for analysis
     │   ├── column_headers.txt
     │   ├── NET500.txt
     │   ├── restricted_500_modified.csv
