@@ -1,7 +1,7 @@
 ## How to Use:
 
 1. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
-2. Download the restricted_500, restricted_1200, and unrestricted_500 files from our Box account
+2. Retrieve the restricted file from HCP500 and HCP1200 releases, and the unrestricted (behavioral file) from HCP500 release
 3. pull this github repo
 
   Your folder structure should look like this
