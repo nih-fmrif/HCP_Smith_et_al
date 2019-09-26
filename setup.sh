@@ -46,7 +46,10 @@ else
 fi
 
 # move files
-mv column_headers.txt rfMRI_motion.txt varsQconf.txt -t data/
+mv column_headers.txt rfMRI_motion.txt varsQconf.txt data/
+# mv column_headers.txt data/
+# mv rfMRI_motion.txt data/
+# mv varsQconf.txt data/
 SMs=data/column_headers.txt
 RFMRI=data/rfMRI_motion.txt
 VARSQCONF=data/varsQconf.txt
@@ -55,7 +58,8 @@ VARSQCONF=data/varsQconf.txt
 echo "Extracting HCP500_Parcellation_Timeseries_Netmats.zip to ./other/"
 unzip -qq $PTN -d other
 tar -xzf other/HCP500_Parcellation_Timeseries_Netmats/netmats_3T_Q1-Q6related468_MSMsulc_ICAd200_ts2.tar.gz
-CIFTI=other/HCP500_Parcellation_Timeseries_Netmats/netmats/3T_Q1-Q6related468_MSMsulc_d200_ts2_netmat2/
+# CIFTI=other/HCP500_Parcellation_Timeseries_Netmats/netmats/3T_Q1-Q6related468_MSMsulc_d200_ts2_netmat2/
+CIFTI=netmats/3T_Q1-Q6related468_MSMsulc_d200_ts2_netmat2/
 
 ### convert the CIFTI files to text files, generate NET, then generate vars
 epoch=$(date +%s) # use unix epoch time
@@ -83,16 +87,18 @@ then
 	done < $file_names
 
 	# Generate NET
-	echo "CIFTI to .txt conversions complete, now generating HCP_500_NET.txt..."
-	python NET.py ${CIFTI}/txt_files_${epoch} $ICA $lines ./data/NET500.txt
+	echo "CIFTI to .txt conversions complete, now generating HCP500 NET file..."
+	python NET.py ${CIFTI}/txt_files_${epoch} $ICA $NUMSUBS
 
 	echo "Fixing HCP500 restricted file, imputing missing Father_ID data for subjects (108525, 116322, 146331, 256540) using data from HCP1200..."
 	./restricted_file_update.sh $RESTR500 $RESTR1200
-	mv $BEHAV500 $RESTR500 $RESTR1200 restricted_500_modified.csv ./data
 
 	# Generate vars
 	echo "Now creating subject measures matrix 'vars'..."
-	python VARS.py $SMs $file_names $BEHAV other/restricted_500_modified.csv $RFMRI $VARSQCONF ./data/VARS500.txt
+	python VARS.py $SMs $file_names $BEHAV500 restricted_500_modified.csv $RFMRI $VARSQCONF
+
+	mv $BEHAV500 $RESTR500 $RESTR1200 restricted_500_modified.csv VARS500.txt NET500.txt data/
+	mv netmats/ other/
 fi
 
 echo "Complete!"
