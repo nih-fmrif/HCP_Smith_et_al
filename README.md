@@ -48,4 +48,36 @@
     
 6. run _hcp_cca_smith.m_ (NOTE: before running, make sure to add the _data/_ folder to your MATLAB path)
 
-**Outputs**
+## Output
+**Data used:**
+  - HCP500 behavioral and restricted datasets
+  - HCP500 netmats
+  - varsQconf
+  - rfMRI
+  - list of 478 SMs
+  
+**Results:**
+  - 461 subjects
+  - Ncca (number of FWE-significant CCA components): 0
+  - Scatter plot of SM weights vs. connectome weights:
+<p align="Center">
+  <img src="images/VvsU.png">
+</p>
+<p align="center">
+    <img src="images/VvsU_regression.png">
+</p>
+
+This plot is similar to the one from Smith et al., but still not exactly the same.
+
+## Variance analysis
+
+The % variance of the connectome weights as explained by CCA mode 1 was also analyzed (in attempt to reproduce result from Smith et al.):
+<p align="Center">
+  <img src="images/percentvariance_explained.png" width=450>
+</p>
+
+Although the % variance for mode 1 (approx 0.53%) agrees with what was reported in smith et al (see image below from the paper), the results for the other 19 CCA modes do not match up. This is likely because this variance analysis is just our guess as to how it was performed in Smith et al.
+
+<p align="Center">
+  <img src="images/smith_percentvar.png" width=450>
+</p>
