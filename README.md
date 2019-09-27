@@ -1,5 +1,7 @@
 ## How to Use:
 
+**Before beginning, you need to install [HCP Workbench]() and ensure that _wb_command_ is on the PATH**
+
 1. git clone this repo and cd into the resulting directory
 2. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
 3. Retrieve the restricted file from HCP1200 release (LINK)
