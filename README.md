@@ -12,6 +12,7 @@
     ├── restricted_1200_release.csv
     ├── unrestricted_500_release.csv
     ├── setup.sh
+    ├── hcp_cca_smith.m
     ├── restricted_file_update.sh
     ├── NET.py
     ├── VARS.py
@@ -43,6 +44,7 @@
     │   ├── VARS500.txt
     │   ├── varsQconf.txt
     ├── HCP500_Parcellation_Timeseries_Netmats.zip
+    ├── hcp_cca_smith.m
     ├── setup.sh
     ├── restricted_file_update.sh
     ├── NET.py
@@ -50,8 +52,7 @@
     ├── urls.txt
     └── requirements.txt
     
-6. run _hcp_cca_smith.m_ (NOTE: before running, make sure to add the _data/_ folder to your MATLAB path)
-
+6. run _hcp_cca_smith.m_
 ## Output
 **Data used:**
   - HCP500 behavioral and restricted datasets
