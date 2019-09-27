@@ -1,25 +1,33 @@
 ## How to Use:
 
-1. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
-2. Retrieve the restricted file from HCP500 and HCP1200 releases, and the unrestricted (behavioral file) from HCP500 release
-3. pull this github repo
+1. git clone this repo and cd into the resulting directory
+2. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
+3. Retrieve the restricted file from HCP1200 release (LINK)
+4. You'll also need the restricted and the unrestricted (behavioral file) from the HCP500 release which is no longer distributed and we're not allowed to distribute it. Hopefully you have a copy somewhere.
+4. Put all of these files in the repo directory
 
   Your folder structure should look like this
   
-    analysis/
+    HCP_Smith_et_al/
     ├── HCP500_Parcellation_Timeseries_Netmats.zip
     ├── restricted_500_release.csv
     ├── restricted_1200_release.csv
     ├── unrestricted_500_release.csv
     ├── setup.sh
-    ├── hcp_cca_smith.m
     ├── restricted_file_update.sh
     ├── NET.py
     ├── VARS.py
     ├── urls.txt
     └── requirements.txt
   
-4. install the dependencies - numpy and pandas (_pip install -r requirements.txt_ or use your preferred package manager)
+4. install the dependencies 
+```
+pip install -r requirements.txt
+```
+or 
+```
+conda create -n HCP_Smith_et_al --file requirements.txt
+```
 5. run _setup.sh_ (NOTE: You only need to run this once!)
 
   ```
@@ -44,7 +52,6 @@
     │   ├── VARS500.txt
     │   ├── varsQconf.txt
     ├── HCP500_Parcellation_Timeseries_Netmats.zip
-    ├── hcp_cca_smith.m
     ├── setup.sh
     ├── restricted_file_update.sh
     ├── NET.py
@@ -52,10 +59,8 @@
     ├── urls.txt
     └── requirements.txt
     
-6. run _hcp_cca_smith.m_
+6. run _hcp_cca_smith.m_ (NOTE: before running, make sure to add the _data/_ folder to your MATLAB path)
 
-  **NOTE: peak memory usage is nearly 18.5gb**
-  
 ## Output
 **Data used:**
   - HCP500 behavioral and restricted datasets
