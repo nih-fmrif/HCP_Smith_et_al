@@ -18,7 +18,14 @@
     ├── urls.txt
     └── requirements.txt
   
-4. install the dependencies (_pip install -r requirements.txt_)
+4. install the dependencies 
+```
+pip install -r requirements.txt
+```
+or 
+```
+conda create -n HCP_Smith_et_al --file requirements.txt
+```
 5. run _setup.sh_ (NOTE: You only need to run this once!)
 
   ```
