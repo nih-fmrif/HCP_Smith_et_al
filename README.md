@@ -1,12 +1,13 @@
 ## How to Use:
 
-1. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
-2. Retrieve the restricted file from HCP500 and HCP1200 releases, and the unrestricted (behavioral file) from HCP500 release
-3. pull this github repo
+1. git clone this repo and cd into the resulting directory
+2. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
+3. Retrieve the restricted file from HCP500 and HCP1200 releases, and the unrestricted (behavioral file) from HCP500 release
+4. Put all of these files in the repo directory
 
   Your folder structure should look like this
   
-    analysis/
+    HCP_Smith_et_al/
     ├── HCP500_Parcellation_Timeseries_Netmats.zip
     ├── restricted_500_release.csv
     ├── restricted_1200_release.csv
