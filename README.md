@@ -19,7 +19,7 @@
     ├── urls.txt
     └── requirements.txt
   
-4. install the dependencies (_pip install -r requirements.txt_)
+4. install the dependencies - numpy and pandas (_pip install -r requirements.txt_ or use your preferred package manager)
 5. run _setup.sh_ (NOTE: You only need to run this once!)
 
   ```
