@@ -53,6 +53,9 @@
     └── requirements.txt
     
 6. run _hcp_cca_smith.m_
+
+  **NOTE: peak memory usage is nearly 18.5gb**
+  
 ## Output
 **Data used:**
   - HCP500 behavioral and restricted datasets
