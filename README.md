@@ -61,7 +61,7 @@ conda create -n HCP_Smith_et_al --file requirements.txt
     ├── urls.txt
     └── requirements.txt
     
-6. run _hcp_cca_smith.m_ (NOTE: before running, make sure to add the _data/_ folder to your MATLAB path)
+6. run _hcp_cca_smith.m_
 
 ## Output
 **Data used:**
