@@ -69,7 +69,7 @@ if [ ! -d ${CIFTI}/txt_files_${epoch} ]; then
   mkdir -p ${CIFTI}/txt_files_${epoch};
 fi
 
-find $CIFTI -name "*.pconn.nii" -execdir echo {} ';' | sort -n > $CIFTI/file_names.txt
+find $CIFTI -maxdepth 1 -name "*.pconn.nii" -execdir echo {} ';' | sort -n > $CIFTI/file_names.txt
 
 file_names=$CIFTI/file_names.txt
 NUMSUBS=$(find $CIFTI -name "*.pconn.nii" -execdir echo {} ';' | wc -l)
