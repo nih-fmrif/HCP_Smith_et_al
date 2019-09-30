@@ -8,7 +8,7 @@ NOTE: if you are using the NIH Biowulf, run _module load connectome-workbench_ b
 2. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
 3. Retrieve the restricted file from HCP1200 release (LINK)
 4. You'll also need the restricted and the unrestricted (behavioral file) from the HCP500 release which is no longer distributed and we're not allowed to distribute it. Hopefully you have a copy somewhere.
-4. Put all of these files in the repo directory
+5. Put all of these files in the repo directory
 
   Your folder structure should look like this
   
@@ -24,7 +24,7 @@ NOTE: if you are using the NIH Biowulf, run _module load connectome-workbench_ b
     ├── urls.txt
     └── requirements.txt
   
-4. install the dependencies 
+6. install the dependencies 
 ```
 pip install -r requirements.txt
 ```
@@ -32,7 +32,7 @@ or
 ```
 conda create --no-default-packages -n HCP_Smith python=3.7 numpy=1.17.2 pandas=0.25.1
 ```
-5. run _setup.sh_ (NOTE: You only need to run this once!)
+7. run _setup.sh_ (NOTE: You only need to run this once!)
 
   ```
   ./setup.sh <path_to_HCP500_Parcellation_Timeseries_Netmats.zip> <path_to_urls.txt> <path_to_HCP500_unrestricted_data> <path_to_HCP500_restricted_data> <path_to_HCP1200_restricted_data>"
@@ -63,7 +63,7 @@ conda create --no-default-packages -n HCP_Smith python=3.7 numpy=1.17.2 pandas=0
     ├── urls.txt
     └── requirements.txt
     
-6. run _hcp_cca_smith.m_
+8. run _hcp_cca_smith.m_
 
 ## Output
 **Data used:**
