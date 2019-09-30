@@ -2,6 +2,8 @@
 
 **Before beginning, you need to install [HCP Workbench](https://www.humanconnectome.org/software/get-connectome-workbench) and ensure that _wb_command_ is on the PATH**
 
+NOTE: if you are using the NIH Biowulf, run _module load connectome-workbench_ before running this code (this will load wb_command so it can be accessed on PATH).
+
 1. git clone this repo and cd into the resulting directory
 2. Download the HCP500 data release [here](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=GroupAvg&filePath=HCP500_Parcellation_Timeseries_Netmats.zip)
 3. Retrieve the restricted file from HCP1200 release (LINK)
@@ -62,16 +64,6 @@ conda create --no-default-packages -n HCP_Test python=3.7 numpy=1.17.2 pandas=0.
     └── requirements.txt
     
 6. run _hcp_cca_smith.m_
-
-## How to use on the NIH Biowulf:
-
-Biowulf requires some special steps:
-- create a new git repo
-- git pull
-- create (use the conda create line written in above section) & activate the conda env
-- _module load connectome-workbench_ for hcp workbench
-- run ./setup.sh as explained above
-
 
 ## Output
 **Data used:**
