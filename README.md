@@ -68,9 +68,9 @@ conda create --no-default-packages -n HCP_Test python=3.7 numpy=1.17.2 pandas=0.
 Biowulf requires some special steps:
 - create a new git repo
 - git pull
-- create & activate a conda env
-- install numpy and pandas
+- create (use the conda create line written in above section) & activate the conda env
 - _module load connectome-workbench_ for hcp workbench
+- run ./setup.sh as explained above
 
 
 ## Output
