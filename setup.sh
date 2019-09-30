@@ -69,7 +69,8 @@ if [ ! -d ${CIFTI}/txt_files_${epoch} ]; then
   mkdir -p ${CIFTI}/txt_files_${epoch};
 fi
 
-find $CIFTI -name "*.pconn.nii" -execdir echo {} ';' | sort -n > $CIFTI/file_names.txt
+# find $CIFTI -name "*.pconn.nii" -execdir echo {} ';' | sort -n > $CIFTI/file_names.txt
+ls $CIFTI*.pconn.nii | xargs -n 1 basename > $CIFTI/file_names.txt
 
 file_names=$CIFTI/file_names.txt
 NUMSUBS=$(find $CIFTI -name "*.pconn.nii" -execdir echo {} ';' | wc -l)
@@ -83,7 +84,8 @@ then
 		fname=$(echo $p | grep -o '^[^.]\+')
 		loadfile=$CIFTI/$p
 		outfile=${CIFTI}/txt_files_${epoch}/$fname.txt
-		/Applications/workbench/bin_macosx64/wb_command -cifti-convert -to-text $loadfile $outfile -col-delim , # use hcp workbench tool wb_command to convert CIFTI --> txt files
+		# Assumes wb_command is on PATH
+		wb_command -cifti-convert -to-text $loadfile $outfile -col-delim , # use hcp workbench tool wb_command to convert CIFTI --> txt files
 	done < $file_names
 
 	# Generate NET

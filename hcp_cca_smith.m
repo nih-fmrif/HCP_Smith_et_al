@@ -3,6 +3,9 @@
 % PALM        http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM
 % nearestSPD  http://www.mathworks.com/matlabcentral/fileexchange/42885-nearestspd
 
+% add 'data/' folder to path
+addpath('data')
+
 %%% input datas
 vars=readmatrix('VARS500.txt');               % needs to be a subjects X subjectmeasures text file - see www.fmrib.ox.ac.uk/analysis/HCP-CCA
 vars(:,sum(isnan(vars)==0)<60)=NaN;  % pre-delete vars with LOADS of missing data
