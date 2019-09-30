@@ -1,4 +1,4 @@
-## How to Use on your Local Computer:
+## How to Use:
 
 **Before beginning, you need to install [HCP Workbench](https://www.humanconnectome.org/software/get-connectome-workbench) and ensure that _wb_command_ is on the PATH**
 
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 or 
 ```
-conda create --no-default-packages -n HCP_Test python=3.7 numpy=1.17.2 pandas=0.25.1
+conda create --no-default-packages -n HCP_Smith python=3.7 numpy=1.17.2 pandas=0.25.1
 ```
 5. run _setup.sh_ (NOTE: You only need to run this once!)
 
