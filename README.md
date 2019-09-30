@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```
 or 
 ```
-conda create -n HCP_Smith_et_al --file requirements.txt python=3.7 numpy==1.17.2 pandas==0.25.1
+conda create --no-default-packages -n HCP_Test python=3.7 numpy=1.17.2 pandas=0.25.1
 ```
 5. run _setup.sh_ (NOTE: You only need to run this once!)
 
