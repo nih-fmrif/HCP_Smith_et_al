@@ -1,4 +1,4 @@
-## How to Use:
+## How to Use on your Local Computer:
 
 **Before beginning, you need to install [HCP Workbench](https://www.humanconnectome.org/software/get-connectome-workbench) and ensure that _wb_command_ is on the PATH**
 
@@ -62,6 +62,16 @@ conda create -n HCP_Smith_et_al --file requirements.txt python=3.7
     └── requirements.txt
     
 6. run _hcp_cca_smith.m_
+
+## How to use on the NIH Biowulf:
+
+Biowulf requires some special steps:
+- create a new git repo
+- git pull
+- create & activate a conda env
+- install numpy and pandas
+- _module load connectome-workbench_ for hcp workbench
+
 
 ## Output
 **Data used:**
